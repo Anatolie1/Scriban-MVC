@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\C#\\Mef\\ScribanMVC\\ScribanMVC.csproj": {}
+    "E:\\C#\\Mef\\ScribanMVC1\\ScribanMVC.csproj": {}
   },
   "projects": {
-    "E:\\C#\\Mef\\ScribanMVC\\ScribanMVC.csproj": {
+    "E:\\C#\\Mef\\ScribanMVC1\\ScribanMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\C#\\Mef\\ScribanMVC\\ScribanMVC.csproj",
+        "projectUniqueName": "E:\\C#\\Mef\\ScribanMVC1\\ScribanMVC.csproj",
         "projectName": "ScribanMVC",
-        "projectPath": "E:\\C#\\Mef\\ScribanMVC\\ScribanMVC.csproj",
+        "projectPath": "E:\\C#\\Mef\\ScribanMVC1\\ScribanMVC.csproj",
         "packagesPath": "C:\\Users\\Student\\.nuget\\packages\\",
-        "outputPath": "E:\\C#\\Mef\\ScribanMVC\\obj\\",
+        "outputPath": "E:\\C#\\Mef\\ScribanMVC1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Student\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -41,10 +41,6 @@
             "Scriban": {
               "target": "Package",
               "version": "[2.1.2, )"
-            },
-            "Selenium.WebDriver": {
-              "target": "Package",
-              "version": "[3.141.0, )"
             }
           },
           "imports": [
@@ -60,6 +56,9 @@
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300-preview-015048\\RuntimeIdentifierGraph.json"

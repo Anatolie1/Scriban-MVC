@@ -6,14 +6,6 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "ScribanMVC/1.0.0": {
-        "dependencies": {
-          "Scriban": "2.1.2"
-        },
-        "runtime": {
-          "ScribanMVC.dll": {}
-        }
-      },
       "Microsoft.CSharp/4.5.0": {},
       "Scriban/2.1.2": {
         "dependencies": {
@@ -31,11 +23,6 @@
     }
   },
   "libraries": {
-    "ScribanMVC/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "Microsoft.CSharp/4.5.0": {
       "type": "package",
       "serviceable": true,

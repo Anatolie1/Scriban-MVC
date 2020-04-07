@@ -1,8 +1,8 @@
-﻿using Scriban;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using Scriban;
 
 namespace ScribanMVC
 {
@@ -20,41 +20,32 @@ namespace ScribanMVC
                 new Product(){Name = "Skirt", Price = 9.99},
                 new Product(){Name = "Bikini", Price = 15.99}
             };
-            CreateHtmlFile();
         }
 
-        public void CreateHtmlFile()
+        public string ShowHtmlData()
         {
-            string html = CreateHtmlText();
+            string html = File.ReadAllText(@"E:\C#\Mef\ScribanMVC\View\ScribanMVC.html");
 
-            string filepath = AppDomain.CurrentDomain.BaseDirectory + "ScribanMVC.html";
+            var template = Template.Parse(html);
+
+            return template.Render(new { Products = ProductList });
+        }
+
+        public void CreateHtmlFile(string html)
+        {
+
+            string filepath = @"E:\C#\Mef\ScribanMVC\View\" + "NewHTML.html";
 
             if (File.Exists(filepath))
             {
                 File.Delete(filepath);
             }
 
-            File.Create(filepath).Close();           
+            File.Create(filepath).Close();
 
             TextWriter tw = new StreamWriter(filepath, true);
             tw.WriteLine(html);
-            tw.Close();            
-        }
-
-        public string CreateHtmlText()
-        {
-            var template = Template.Parse(@"
-            <ul id='products'>
-                {{ for product in products }}
-                <li>
-                    <h2>{{ product.name }}</h2>
-                    Price : {{ product.price }}
-                </li>
-                {{ end }}
-            </ul>
-            ");
-            var result = template.Render(new { Products = ProductList });
-            return result;
+            tw.Close();
         }
     }
 }
